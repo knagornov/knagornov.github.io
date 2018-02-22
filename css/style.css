@@ -1341,10 +1341,6 @@ img {
       padding-bottom: 69px;
       padding-left: 40px; } }
 
-@media (min-width: 1300px) {
-  .catalog__item:nth-child(n + 5) {
-    margin-top: 3px; } }
-
 .food-item {
   border-bottom: 1px solid #ededed; }
   @media (min-width: 768px) {

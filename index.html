@@ -1,62 +1,44 @@
-<!DOCTYPE HTML>
-<html lang="ru">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__wrapper">
-        <p class="page-header__name">konstantin.nagornov</p>
-        <ul class="page-header__social social">
-          <li>
-            <a class="social__button social__button--email" href="mailto:konstantin.nagornov@gmail.com">
-              <span class="visually-hidden">My e-mail</span>
+    <main class="page-main">
+      <div class="page-main__wrapper">
+        <ul class="page-main__works works">
+          <li class="works__item">
+            <a class="work__link" href="portfolio/cat-energy/index.html" target="_blank">
+              <picture>
+                <source type="image/webp" srcset="img/cat-energy@1x.webp 1x, img/cat-energy@2x.webp 2x">
+                <img class="work__image" src="img/cat-energy@1x.jpg" srcset="img/cat-energy@2x.jpg 2x" alt="">
+              </picture>
             </a>
           </li>
-          <li>
-            <a class="social__button social__button--telegram" href="https://t.me/woodsmoke">
-              <span class="visually-hidden">My Telegram account</span>
-            </a>
-          </li>
-          <li>
-            <a class="social__button social__button--github" href="https://github.com/knagornov">
-              <span class="visually-hidden">My GitHub account</span>
+          <li class="works__item">
+            <a class="work__link" href="portfolio/device/index.html" target="_blank">
+              <picture>
+                <source type="image/webp" srcset="img/device@1x.webp 1x, img/device@2x.webp 2x">
+                <img class="work__image" src="img/device@1x.jpg" srcset="img/device@2x.jpg 2x" alt="">
+              </picture>
             </a>
           </li>
         </ul>
+        <ul class="page-main__social social">
+          <li class="social__item">
+            <a class="social-link social-link--email" href="mailto:konstantin.nagornov@gmail.com"></a>
+          </li>
+          <li class="social__item">
+            <a class="social-link social-link--telegram" href="https://t.me/woodsmoke" target="_blank"></a>
+          </li>
+          <li class="social__item">
+            <a class="social-link social-link--github" href="https://github.com/knagornov" target="_blank"></a>
+          </li>
+        </ul>
       </div>
-    </header>
-
-    <main class="main-page">
-      <h1 class="visually-hidden">Konstantin Nagornov. Portfolio</h1>
-      <ul class="main-page__works works">
-        <li class="works__item">
-          <a class="works__link" href="portfolio/cat-energy/index.html" target="_blank">
-            <picture>
-              <source media="(min-width: 768px) and (max-width: 1299px)" srcset="img/cat-energy-tablet@1x.jpg 1x, img/cat-energy-tablet@2x.jpg 2x">
-              <img class="works__image" src="img/cat-energy@1x.jpg" srcset="img/cat-energy@2x.jpg 2x" alt="">
-            </picture>
-            <span class="works__title">Cat Energy</span>
-            <span class="works__description">3 adaptive pages</span>
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__link" href="portfolio/device/index.html" target="_blank"> 
-            <picture>
-              <source media="(min-width: 768px) and (max-width: 1299px)" srcset="img/device-tablet@1x.jpg 1x, img/device-tablet@2x.jpg 2x">
-              <img class="works__image" src="img/device@1x.jpg" srcset="img/device@2x.jpg 2x" alt="">
-            </picture>
-            <span class="works__title">Device</span>
-            <span class="works__description">Main page and monopods</span>
-          </a>
-        </li>
-      </ul>
     </main>
-
-    <script src="js/picturefill.js"></script>
   </body>
 </html>

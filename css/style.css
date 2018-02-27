@@ -15,6 +15,7 @@ body {
 
 @media (min-width: 768px) {
   body {
+    min-height: 381px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,10 +133,6 @@ body {
 }
 
 @media (min-width: 1300px) {
-  .works__item:nth-child(2n + 2) {
-    margin-right: 20px;
-  }
-
   .works__item:nth-child(4n + 4) {
     margin-right: 0;
   }

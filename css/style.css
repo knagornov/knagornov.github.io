@@ -96,7 +96,7 @@ body {
 
   height: 1px;
 
-  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.3) 80%, transparent 100%);
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 512px, rgba(255, 255, 255, 0.6) 712px, rgba(255, 255, 255, 0.3) 80%, transparent 100%);
 }
 
 .page-main__works::before {
@@ -105,6 +105,10 @@ body {
 
 .page-main__works::after {
   bottom: 0;
+}
+
+.page-main__works::after {
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 537px, transparent 532px, transparent 687px, rgba(255, 255, 255, 0.6) 687px, rgba(255, 255, 255, 0.3) 80%, transparent 100%);
 }
 
 @media (min-width: 768px) {
@@ -140,6 +144,7 @@ body {
 @media (min-width: 768px) {
   .works__list {
     display: flex;
+    padding: 30px 0;
 
     transition: 1s;
   }
@@ -346,9 +351,15 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 20px;
+  padding: 20px 0;
 
   list-style: none;
+}
+
+@media (min-width: 768px) {
+  .social__list {
+    padding: 50px 0;
+  }
 }
 
 .social__item {
@@ -411,4 +422,51 @@ body {
 
 .social-link:active {
   opacity: 0.3;
+}
+
+.works__show-all {
+  position: absolute;
+  top: 241px;
+  left: 537px;
+
+  display: block;
+  box-sizing: border-box;
+  width: 150px;
+  height: 36px;
+  padding: 4px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Verdana", sans-serif;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.works__show-all:hover,
+.works__show-all:focus {
+  color: rgba(255, 255, 255, 1);
+
+  background-color: rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 1);
+  border-bottom-color: rgba(255, 255, 255, 1);
+  transition: 0.2s;
+}
+
+.works__show-all:active {
+  transition: 0.2s;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: none;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.works__show-all--nojs {
+  display: none;
 }

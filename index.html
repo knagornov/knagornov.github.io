@@ -1,1 +1,83 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Портфолио</title><link href="css/normalize.min.css" rel="stylesheet"><link href="css/style.min.css" rel="stylesheet"></head><body> <main class="page-main"><h1 class="visually-hidden">Портфолио Константина Нагорнова</h1><div class="page-main__wrapper"> <section class="page-main__works works"><h2 class="visually-hidden">Работы</h2> <button class="works__button works__button--prev" type="button"></button><div class="works__slider-container"><ul class="works__list"><li class="works__item"><h3 class="visually-hidden">Адаптивный сайт Cat Energy</h3> <a class="works__link" href="portfolio/cat-energy/index.html" target="_blank"> <picture> <source type="image/webp" srcset="img/cat-energy@1x.webp 1x, img/cat-energy@2x.webp 2x"> <img class="works__image" src="img/cat-energy@1x.jpg" srcset="img/cat-energy@2x.jpg 2x" alt="Превью сайта Cat Energy"> </picture> </a></li><li class="works__item"><h3 class="visually-hidden">Сайт интернет-магазина Device</h3> <a class="works__link" href="portfolio/device/index.html" target="_blank"> <picture> <source type="image/webp" srcset="img/device@1x.webp 1x, img/device@2x.webp 2x"> <img class="works__image" src="img/device@1x.jpg" srcset="img/device@2x.jpg 2x" alt="Превью сайта Device"> </picture> </a></li><li class="works__item works__item--temp"><div class="works__image works__image--temp" tabindex="0"><p class="works__text">Здесь будет новый&nbsp;проект</p></div></li><li class="works__item works__item--temp"><div class="works__image works__image--temp" tabindex="0"><p class="works__text">И здесь</p></div></li><li class="works__item works__item--temp"><div class="works__image works__image--temp" tabindex="0"><p class="works__text">А это для тестирования слайдера на JS</p></div></li></ul> <button class="works__button works__button--next" type="button"></button></div> </section><section class="page-main__social social"><h2 class="visually-hidden">Контакты</h2><ul class="social__list"><li class="social__item"> <a class="social-link social-link--email" href="mailto:konstantin.nagornov@gmail.com"> <span class="visually-hidden">Электронная почта</span> </a></li><li class="social__item"> <a class="social-link social-link--telegram" href="https://t.me/woodsmoke" target="_blank"> <span class="visually-hidden">Аккаунт в Telegram</span> </a></li><li class="social__item"> <a class="social-link social-link--github" href="https://github.com/knagornov" target="_blank"> <span class="visually-hidden">Аккаунт в GitHub</span> </a></li></ul> </section></div> </main> <script src="js/slider.min.js"></script> </body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Портфолио</title>
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <main class="page-main">
+      <h1 class="visually-hidden">Портфолио Константина Нагорнова</h1>
+      <div class="page-main__wrapper">
+        <section class="page-main__works works">
+          <h2 class="visually-hidden">Работы</h2>
+          <button class="works__button works__button--prev" type="button"></button>
+          <div class="works__slider-container">
+            <ul class="works__list">
+              <li class="works__item">
+                <h3 class="visually-hidden">Адаптивный сайт Cat Energy</h3>
+                <a class="works__link" href="portfolio/cat-energy/index.html" target="_blank">
+                  <picture>
+                    <source type="image/webp" srcset="img/cat-energy@1x.webp 1x, img/cat-energy@2x.webp 2x">
+                    <img class="works__image" src="img/cat-energy@1x.jpg" srcset="img/cat-energy@2x.jpg 2x" alt="Превью сайта Cat Energy">
+                  </picture>
+                </a>
+              </li>
+              <li class="works__item">
+                <h3 class="visually-hidden">Сайт интернет-магазина Device</h3>
+                <a class="works__link" href="portfolio/device/index.html" target="_blank">
+                  <picture>
+                    <source type="image/webp" srcset="img/device@1x.webp 1x, img/device@2x.webp 2x">
+                    <img class="works__image" src="img/device@1x.jpg" srcset="img/device@2x.jpg 2x" alt="Превью сайта Device">
+                  </picture>
+                </a>
+              </li>
+              <li class="works__item works__item--temp">
+                <div class="works__image works__image--temp" tabindex="0">
+                  <p class="works__text">Здесь будет новый&nbsp;проект</p>
+                </div>
+              </li>
+              <li class="works__item works__item--temp">
+                <div class="works__image works__image--temp" tabindex="0">
+                  <p class="works__text">И здесь</p>
+                </div>
+              </li>
+              <li class="works__item works__item--temp">
+                <div class="works__image works__image--temp" tabindex="0">
+                  <p class="works__text">А это для тестирования слайдера на JS</p>
+                </div>
+              </li>
+            </ul>
+            <button class="works__button works__button--next" type="button"></button>
+            <a class="works__show-all" href="#">Показать все</a>
+          </div>
+        </section>
+
+        <section class="page-main__social social">
+          <h2 class="visually-hidden">Контакты</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social-link social-link--email" href="mailto:konstantin.nagornov@gmail.com">
+                <span class="visually-hidden">Электронная почта</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social-link social-link--telegram" href="https://t.me/woodsmoke" target="_blank">
+                <span class="visually-hidden">Аккаунт в Telegram</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social-link social-link--github" href="https://github.com/knagornov" target="_blank">
+                <span class="visually-hidden">Аккаунт в GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/slider.min.js"></script>
+  </body>
+</html>

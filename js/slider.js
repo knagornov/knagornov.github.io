@@ -40,11 +40,16 @@ if ((window.innerWidth >= 768 && sliderItems.length <= 2) || (window.innerWidth 
   prevButton.classList.add("works__button--disabled");
 } else if (window.innerWidth >= 768) {
   var itemRightIndex = sliderInitial();
-};
+}
 
 window.addEventListener("resize", function () {
   if (window.innerWidth >= 768) {
     itemRightIndex = sliderInitial();
+  } else {
+    sliderContainer.style.marginLeft = "0";
+    for (var i = 0; i < sliderItems.length; i++) {
+      sliderItems[i].classList.remove("works__item--hidden");
+    }
   }
 });
 

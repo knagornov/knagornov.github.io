@@ -38,10 +38,14 @@ var sliderInitial = function () {
 if ((window.innerWidth >= 768 && sliderItems.length <= 2) || (window.innerWidth >= 1300 && sliderItems.length <= 4)) {
   nextButton.classList.add("works__button--disabled");
   prevButton.classList.add("works__button--disabled");
-} else var itemRightIndex = sliderInitial();
+} else if (window.innerWidth >= 768) {
+  var itemRightIndex = sliderInitial();
+};
 
 window.addEventListener("resize", function () {
-  itemRightIndex = sliderInitial();
+  if (window.innerWidth >= 768) {
+    itemRightIndex = sliderInitial();
+  }
 });
 
 nextButton.addEventListener("click", function () {

@@ -6,6 +6,8 @@ var prevButton = document.querySelector(".works__button--prev");
 var widthSliderItem = 290;
 var position = 0;
 
+document.body.classList.remove("nojs");
+
 var sliderInitial = function () {
   position = 0;
   sliderContainer.style.marginLeft = "0";

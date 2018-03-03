@@ -2,6 +2,8 @@
 
 var gulp = require("gulp");
 
+var server = require("browser-sync").create();
+
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
@@ -17,6 +19,19 @@ var uglify = require("gulp-uglify");
 var del = require("del");
 var rename = require("gulp-rename");
 var run = require("run-sequence");
+
+gulp.task("serve", function() {
+  server.init({
+    server: ".",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+  gulp.watch("source/css/style.css", ["style"]);
+  gulp.watch("source/js/*.js", ["js"]);
+  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
+});
 
 gulp.task("clean", function () {
   return del([
@@ -43,6 +58,7 @@ gulp.task("style", function() {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("css"))
+    .pipe(server.stream());
 });
 
 gulp.task("html", function () {
@@ -55,8 +71,9 @@ gulp.task("html", function () {
 
 gulp.task("js", function () {
   return gulp.src("source/js/*.js")
-    .pipe(uglify())
+    .pipe(uglify().on("error", function (evt) { console.log(evt); }))
     .pipe(gulp.dest("js"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function () {

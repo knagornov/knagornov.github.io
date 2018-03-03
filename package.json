@@ -30,7 +30,7 @@
     "*.json",
     "*.js",
     "source/*.html",
-    "source/css/{style,noscript}.css",
+    "source/css/style.css",
     "source/js/*.js"
   ]
 }

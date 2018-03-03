@@ -10,22 +10,24 @@ var sliderInitial = function () {
   position = 0;
   sliderContainer.style.marginLeft = "0";
   nextButton.classList.remove("works__button--disabled");
-  if (window.innerWidth >= 1300) {
+  if (window.innerWidth >= 1300 && sliderItems.length > 4) {
     var itemRightIndex = 3;
     for (var i = 0; i <= itemRightIndex; i++) {
       sliderItems[i].classList.remove("works__item--hidden");
     }
     prevButton.classList.add("works__button--disabled");
-  } else if (window.innerWidth >= 768) {
+  } else if (window.innerWidth >= 768 && window.innerWidth < 1300 && sliderItems.length > 2) {
     var itemRightIndex = 1;
     for (var i = 0; i <= itemRightIndex; i++) {
       sliderItems[i].classList.remove("works__item--hidden");
     }
     prevButton.classList.add("works__button--disabled");
-  } else if (window.innerWidth < 768) {
+  } else {
     for (var i = 0; i < sliderItems.length; i++) {
       sliderItems[i].classList.remove("works__item--hidden");
     }
+    prevButton.classList.add("works__button--disabled");
+    nextButton.classList.add("works__button--disabled");
   }
   for (var i = itemRightIndex + 1; i < sliderItems.length; i++) {
     sliderItems[i].classList.add("works__item--hidden");
@@ -33,15 +35,12 @@ var sliderInitial = function () {
   return itemRightIndex;
 };
 
-if ((window.innerWidth >= 768 && sliderItems.length <= 2) || (window.innerWidth >= 1300 && sliderItems.length <= 4)) {
-  nextButton.classList.add("works__button--disabled");
-  prevButton.classList.add("works__button--disabled");
-} else if (window.innerWidth >= 768) {
+if ((window.innerWidth >= 768 && sliderItems.length > 2) || (window.innerWidth >= 1300 && sliderItems.length > 4)) {
   var itemRightIndex = sliderInitial();
-}
+};
 
 window.addEventListener("resize", function () {
-  if (window.innerWidth >= 768) {
+  if ((window.innerWidth >= 768 && sliderItems.length > 2) || (window.innerWidth >= 1300 && sliderItems.length > 4)) {
     itemRightIndex = sliderInitial();
   } else {
     sliderContainer.style.marginLeft = "0";

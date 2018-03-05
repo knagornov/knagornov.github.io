@@ -1,1 +1,1 @@
-@media (min-width:768px){.works__list{-ms-flex-wrap:wrap;flex-wrap:wrap}.works__item:nth-child(2n+2){margin-right:0}.works__button{display:none}}@media (min-width:1300px){.works__item:nth-child(2n+2){margin-right:10px}.works__item:nth-child(4n+4){margin-right:0}}
+@media (min-width:768px){.works__list{flex-wrap:wrap}.works__item:nth-child(2n+2){margin-right:0}.works__button{display:none}}@media (min-width:1300px){.works__item:nth-child(2n+2){margin-right:10px}.works__item:nth-child(4n+4){margin-right:0}}

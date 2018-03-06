@@ -40,16 +40,22 @@ function disableSlider() {
   nextButton.classList.add("works__button--disabled");
 }
 
+
+var page = document.querySelector(".page-main__wrapper");
+var currentPageWidth = page.offsetWidth;
+
 if (window.innerWidth >= 768) {
   var position = 0;
   var itemRightIndex = sliderInitial();
 };
 
 window.addEventListener("resize", function () {
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 768 && currentPageWidth != page.offsetWidth) {
     itemRightIndex = sliderInitial();
-  } else {
+    currentPageWidth = page.offsetWidth;
+  } else if (window.innerWidth < 768 && currentPageWidth != page.offsetWidth) {
     disableSlider();
+    currentPageWidth = page.offsetWidth;
   }
 });
 

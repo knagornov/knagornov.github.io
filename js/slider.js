@@ -1,1 +1,91 @@
-var sliderContainer=document.querySelector(".works__list"),sliderItems=document.querySelectorAll(".works__item"),nextButton=document.querySelector(".works__button--next"),prevButton=document.querySelector(".works__button--prev"),widthSliderItem=290,position=0,sliderInitial=function(){if(position=0,sliderContainer.style.marginLeft="0",nextButton.classList.remove("works__button--disabled"),1300<=window.innerWidth&&4<sliderItems.length){for(var e=3,t=0;t<=e;t++)sliderItems[t].classList.remove("works__item--hidden");prevButton.classList.add("works__button--disabled")}else if(768<=window.innerWidth&&window.innerWidth<1300&&2<sliderItems.length){for(e=1,t=0;t<=e;t++)sliderItems[t].classList.remove("works__item--hidden");prevButton.classList.add("works__button--disabled")}else{for(t=0;t<sliderItems.length;t++)sliderItems[t].classList.remove("works__item--hidden");prevButton.classList.add("works__button--disabled"),nextButton.classList.add("works__button--disabled")}for(t=e+1;t<sliderItems.length;t++)sliderItems[t].classList.add("works__item--hidden");return e};if(768<=window.innerWidth&&2<sliderItems.length||1300<=window.innerWidth&&4<sliderItems.length)var itemRightIndex=sliderInitial();window.addEventListener("resize",function(){if(768<=window.innerWidth&&2<sliderItems.length||1300<=window.innerWidth&&4<sliderItems.length)itemRightIndex=sliderInitial();else{sliderContainer.style.marginLeft="0";for(var e=0;e<sliderItems.length;e++)sliderItems[e].classList.remove("works__item--hidden")}}),nextButton.addEventListener("click",function(){1300<=window.innerWidth?(sliderItems[itemRightIndex+1].classList.remove("works__item--hidden"),sliderItems[itemRightIndex-3].classList.add("works__item--hidden")):768<=window.innerWidth&&(sliderItems[itemRightIndex-1].classList.add("works__item--hidden"),sliderItems[itemRightIndex+1].classList.remove("works__item--hidden")),++itemRightIndex==sliderItems.length-1&&nextButton.classList.add("works__button--disabled"),position-=widthSliderItem,sliderContainer.style.marginLeft=position+"px",prevButton.classList.remove("works__button--disabled")}),prevButton.addEventListener("click",function(){itemRightIndex--,1300<=window.innerWidth?(sliderItems[itemRightIndex-3].classList.remove("works__item--hidden"),sliderItems[itemRightIndex+1].classList.add("works__item--hidden")):768<=window.innerWidth&&(sliderItems[itemRightIndex-1].classList.remove("works__item--hidden"),sliderItems[itemRightIndex+1].classList.add("works__item--hidden")),0===(position+=widthSliderItem)&&prevButton.classList.add("works__button--disabled"),sliderContainer.style.marginLeft=position+"px",nextButton.classList.remove("works__button--disabled")});
+var sliderContainer = document.querySelector(".works__list");
+var sliderItems = document.querySelectorAll(".works__item");
+var nextButton = document.querySelector(".works__button--next");
+var prevButton = document.querySelector(".works__button--prev");
+
+function sliderInitial() {
+  position = 0;
+  sliderContainer.style.marginLeft = "0";
+
+  if (window.innerWidth >= 1300 && sliderItems.length > 4) {
+    itemRightIndex = 3;
+    hideSliderItems();
+  } else if (window.innerWidth >= 768 && window.innerWidth < 1300 && sliderItems.length > 2) {
+    itemRightIndex = 1;
+    hideSliderItems();
+  } else {
+    disableSlider();
+  }
+  return itemRightIndex;
+};
+
+function hideSliderItems() {
+  for (var i = 0; i < sliderItems.length; i++) {
+    if (i <= itemRightIndex) {
+      sliderItems[i].classList.remove("works__item--hidden");
+    } else {
+      sliderItems[i].classList.add("works__item--hidden");
+    }
+  }
+  prevButton.classList.add("works__button--disabled");
+  nextButton.classList.remove("works__button--disabled");
+}
+
+function disableSlider() {
+  sliderContainer.style.marginLeft = "0";
+  for (var i = 0; i < sliderItems.length; i++) {
+    sliderItems[i].classList.remove("works__item--hidden");
+  }
+  prevButton.classList.add("works__button--disabled");
+  nextButton.classList.add("works__button--disabled");
+}
+
+if (window.innerWidth >= 768) {
+  var position = 0;
+  var itemRightIndex = sliderInitial();
+};
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 768) {
+    itemRightIndex = sliderInitial();
+  } else {
+    disableSlider();
+  }
+});
+
+var marginRight = 10;
+var shift = sliderItems[0].offsetWidth + marginRight;
+
+nextButton.addEventListener("click", function () {
+  if (window.innerWidth >= 1300) {
+    sliderItems[itemRightIndex + 1].classList.remove("works__item--hidden");
+    sliderItems[itemRightIndex - 3].classList.add("works__item--hidden");
+  } else if (window.innerWidth >= 768) {
+    sliderItems[itemRightIndex - 1].classList.add("works__item--hidden");
+    sliderItems[itemRightIndex + 1].classList.remove("works__item--hidden");
+  }
+  itemRightIndex++;
+  if (itemRightIndex === sliderItems.length - 1) {
+    nextButton.classList.add("works__button--disabled");
+  }
+  position -= shift;
+  sliderContainer.style.marginLeft = position + "px";
+  prevButton.classList.remove("works__button--disabled");
+});
+
+prevButton.addEventListener("click", function () {
+  itemRightIndex--;
+  if (window.innerWidth >= 1300) {
+    sliderItems[itemRightIndex - 3].classList.remove("works__item--hidden");
+    sliderItems[itemRightIndex + 1].classList.add("works__item--hidden");
+  } else if (window.innerWidth >= 768) {
+    sliderItems[itemRightIndex - 1].classList.remove("works__item--hidden");
+    sliderItems[itemRightIndex + 1].classList.add("works__item--hidden");
+  }
+  position += shift;
+  if (position === 0) {
+    prevButton.classList.add("works__button--disabled");
+  }
+  sliderContainer.style.marginLeft = position + "px";
+  nextButton.classList.remove("works__button--disabled");
+});

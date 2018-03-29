@@ -1,0 +1,1 @@
+var menuButton=document.querySelector(".main-nav__toggle");menuButton.addEventListener("click",function(){menuButton.classList.toggle("main-nav__toggle--opened")});

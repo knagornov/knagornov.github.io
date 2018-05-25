@@ -6,7 +6,6 @@
   var sliderThumb = sliderBar.querySelector('.player__slider-thumb');
   var thumbShift = Math.ceil(sliderThumb.offsetWidth / 2);
   var SHIFT_BY_ARROW = 5;
-  var startX;
 
   var KeyCode = {
     LEFT_ARROW: 37,
@@ -39,7 +38,7 @@
   sliderThumb.addEventListener('mousedown', function (downEvt) {
     downEvt.preventDefault();
 
-    startX = downEvt.clientX;
+    var startX = downEvt.clientX;
 
     var moveThumbByMouse = function (evt) {
       var shiftX = startX - evt.clientX + thumbShift;

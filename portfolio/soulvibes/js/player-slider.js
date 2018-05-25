@@ -82,4 +82,8 @@
       document.removeEventListener('keydown', onSliderKeyDown);
     });
   });
+
+  slider.addEventListener('mousedown', function (evt) {
+    moveThumb(evt.pageX - thumbShift - getElementX(sliderBar));
+  });
 })();

@@ -7,7 +7,8 @@
   player.addEventListener('click', function (evt) {
     var target = evt.target.closest('.player__button');
 
-    if (!target) {
+    if (!target || target.classList.contains('player__button--prev') ||
+        target.classList.contains('player__button--next')) {
       return;
     }
 

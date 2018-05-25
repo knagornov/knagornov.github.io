@@ -1,1 +1,25 @@
-var playButton=document.querySelector(".player__button--play"),volumeButton=document.querySelector(".player__button--volume"),repeatButton=document.querySelector(".player__button--repeat"),playlistButton=document.querySelector(".player__button--playlist"),playlistElem=document.querySelector(".playlist"),sliderElem=document.querySelector(".player__slider"),sliderBar=document.querySelector(".player__slider-bar"),thumbElem=document.querySelector(".player__slider-thumb");function getCoords(t){var e=t.getBoundingClientRect();return{top:e.top+pageYOffset,left:e.left+pageXOffset}}playButton.onclick=function(){playButton.classList.toggle("player__button--playing")},volumeButton.onclick=function(){volumeButton.classList.toggle("player__button--active")},repeatButton.onclick=function(){repeatButton.classList.toggle("player__button--active")},playlistButton.onclick=function(){playlistButton.classList.toggle("player__button--active"),playlistElem.classList.toggle("playlist--show")},sliderElem.onfocus=function(){document.onkeydown=function(t){if(39===t.keyCode)var e=5;else{if(37!==t.keyCode)return;e=-5}var o=getCoords(thumbElem),l=Math.ceil(thumbElem.offsetWidth/2),r=getCoords(sliderBar),n=o.left-r.left+e;n<-e&&(n=0);var u=sliderBar.offsetWidth-thumbElem.offsetWidth;n>u&&(n=u),thumbElem.style.left=n+"px",sliderBar.style.backgroundImage="linear-gradient(to right, #72040d "+(n+l)+"px, transparent "+(n+l)+"px)"}},sliderBar.onmouseup=function(t){getCoords(thumbElem);var e=Math.ceil(thumbElem.offsetWidth/2),o=getCoords(sliderBar),l=t.pageX-o.left-e;l<e&&(l=0);var r=sliderBar.offsetWidth-thumbElem.offsetWidth;l>r&&(l=r),thumbElem.style.left=l+"px",sliderBar.style.backgroundImage="linear-gradient(to right, #72040d "+(l+e)+"px, transparent "+(l+e)+"px)"},thumbElem.onmousedown=function(t){t.preventDefault();var e=getCoords(thumbElem),o=t.pageX-e.left,l=getCoords(sliderBar);return document.onmousemove=function(t){var e=t.pageX-o-l.left;e<0&&(e=0);var r=sliderBar.offsetWidth-thumbElem.offsetWidth;e>r&&(e=r),thumbElem.style.left=e+"px",sliderBar.style.backgroundImage="linear-gradient(to right, #72040d "+(e+o)+"px, transparent "+(e+o)+"px)"},document.onmouseup=function(){document.onmousemove=document.onmouseup=null},!1},thumbElem.ondragstart=function(){return!1};
+'use strict';
+
+(function () {
+  var player = document.querySelector('.player__container');
+  var playlist = player.querySelector('.playlist');
+
+  player.addEventListener('click', function (evt) {
+    var target = evt.target.closest('.player__button');
+
+    if (!target) {
+      return;
+    }
+
+    if (target.classList.contains('player__button--play')) {
+      target.classList.toggle('player__button--playing');
+      return;
+    }
+
+    if (target.classList.contains('player__button--playlist')) {
+      playlist.classList.toggle('playlist--show');
+    }
+
+    target.classList.toggle('player__button--active');
+  });
+})();

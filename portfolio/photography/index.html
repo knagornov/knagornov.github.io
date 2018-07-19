@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Photography</title>
     <meta name="viewport" content="width=device-width, maximum-scale=1">
-    <!-- <meta name="viewport" content="width=device-width"> -->
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -13,9 +12,7 @@
     </div>
 
     <header class="page-header">
-      <div class="page-header__logo logo">
-        <img class="logo__image" src="img/logo.png" width="196" height="26" alt="Logo">
-      </div>
+      <img class="page-header__logo" src="img/logo.png" width="196" height="26" alt="Logo">
       <nav class="page-header__main-nav main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -250,9 +247,9 @@
               <div class="post__wrapper">
                 <h3 class="post__title">Design is the method of putting form and content together .</h3>
                 <p class="post__info">
-                  <span class="post-info__type">Life style</span>
+                  <span class="post__info-type">Life style</span>
                   -
-                  <span class="post-info__date">July 3, 2017</span>
+                  <span class="post__info-date">July 3, 2017</span>
                 </p>
                 <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit lao hoksi voluptatem lios mukatu accusantium doloremq doisa nojilaudan tium, totam rem aperiam, uni eaque ipsa quae ab cok illo inven tore siva.</p>
                 <a class="post__read-more-link" href="#">Read More</a>
@@ -263,9 +260,9 @@
               <div class="post__wrapper">
                 <h3 class="post__title">Design is the method of putting form and content together .</h3>
                 <p class="post__info">
-                  <span class="post-info__type">Life style</span>
+                  <span class="post__info-type">Life style</span>
                   -
-                  <span class="post-info__date">July 3, 2017</span>
+                  <span class="post__info-date">July 3, 2017</span>
                 </p>
                 <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit lao hoksi voluptatem lios mukatu accusantium doloremq doisa nojilaudan tium, totam rem aperiam, uni eaque ipsa quae ab cok illo inven tore siva.</p>
                 <a class="post__read-more-link" href="#">Read More</a>
@@ -276,9 +273,9 @@
               <div class="post__wrapper">
                 <h3 class="post__title">Design is the method of putting form and content together .</h3>
                 <p class="post__info">
-                  <span class="post-info__type">Life style</span>
+                  <span class="post__info-type">Life style</span>
                   -
-                  <span class="post-info__date">July 3, 2017</span>
+                  <span class="post__info-date">July 3, 2017</span>
                 </p>
                 <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit lao hoksi voluptatem lios mukatu accusantium doloremq doisa nojilaudan tium, totam rem aperiam, uni eaque ipsa quae ab cok illo inven tore siva.</p>
                 <a class="post__read-more-link" href="#">Read More</a>
@@ -289,143 +286,174 @@
       </section>
 
       <section class="page-main__lets-work lets-work">
-        <h2 class="lets-work__title">Let's work?</h2>
-        <form class="lets-work__form message-form" action="#" method="post">
-          <p class="message-form__item">
-            <label class="hidden" for="name">Your name</label>
-            <input class="message-form__field" id="name" type="text" placeholder="*Your name" required="">
-          </p>
-          <p class="message-form__item">
-            <label class="hidden" for="email">Your Email</label>
-            <input class="message-form__form-field" id="email" type="email" placeholder="*Your Email" required="">
-          </p>
-          <p class="message-form__item">
-            <label class="hidden" for="message">Your Messages</label>
-            <textarea class="message-form__message" id="message" placeholder="Your Messages"></textarea>
-          </p>
-          <p class="message-form__item">
-            <button class="message-form__submit button" type="submit">Send message</button>
-          </p>
-        </form>
+        <div class="lets-work__container">
+          <h2 class="lets-work__title">Let's work?</h2>
+          <form class="lets-work__form message-form" action="#" method="post">
+            <p class="message-form__item">
+              <label class="hidden" for="name">Your name</label>
+              <input class="message-form__field" id="name" type="text" placeholder="*Your name" required="">
+            </p>
+            <p class="message-form__item">
+              <label class="hidden" for="email">Your Email</label>
+              <input class="message-form__field" id="email" type="email" placeholder="*Your Email" required="">
+            </p>
+            <p class="message-form__item">
+              <label class="hidden" for="message">Your Messages</label>
+              <textarea class="message-form__field message-form__field--message" id="message" placeholder="Your Messages"></textarea>
+            </p>
+            <p class="message-form__item">
+              <button class="message-form__submit button" type="submit">Send message</button>
+            </p>
+          </form>
+          <a class="lets-work__top-link" href="#intro">
+            <span class="hidden">To top</span>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__column">
-        <div style="background-color: blue" class="page-footer__logo logo">
-          <img class="logo__image" src="img/logo.png" width="196" height="26" alt="Logo">
+      <div class="page-footer__container">
+        <div class="page-footer__column">
+          <img class="page-footer__logo" src="img/logo.png" width="196" height="26" alt="Logo">
+          <div class="page-footer__contact contact">
+            <h2 class="contact__title">Contact</h2>
+            <p class="contact__address">237 Church St, San Francisco, CA 94114, USA nazmulhasanjingar@gmail.com</p>
+          </div>
+          <div class="page-footer__social-wrapper">
+            <h2 class="page-footer__social-title">Follow me on:</h2>
+            <ul class="page-footer__social social">
+              <li class="social__item social__item--footer">
+                <a class="social__link" href="#" aria-label="My Facebook">
+                  <svg class="social-button__icon social-button__icon--facebook" width="10" height="21" role="img">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+                </a>
+              </li>
+              <li class="social__item social__item--footer">
+                <a class="social__link" href="#" aria-label="My Twitter">
+                  <svg class="social-button__icon social-button__icon--twitter" width="22" height="19" role="img">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg></a>
+              </li>
+              <li class="social__item social__item--footer">
+                <a class="social__link" href="#" aria-label="My Instagram">
+                  <svg class="social-button__icon social-button__icon--instagram" width="22" height="21" role="img">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item social__item--footer">
+                <a class="social__link" href="#" aria-label="My Flickr">
+                  <svg class="social-button__icon social-button__icon--flickr" width="23" height="22" role="img">
+                    <use xlink:href="#icon-flickr"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="page-footer__contact contact">
-          <h2 class="contact__title">Contact</h2>
-          <p class="page-footer__address">237 Church St, San Francisco, CA 94114, USA nazmulhasanjingar@gmail.com</p>
-        </div>
-        <!-- <div class="page-footer__social social"> -->
-          <!-- <h2 class="social__title">Follow me on:</h2> -->
-          <!-- <ul class="intro__social social">
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">My Facebook</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">My Twitter</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">My Instargram</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--flickr" href="#">My Flickr</a>
-            </li>
-          </ul> -->
-        <!-- </div> -->
-      </div>
 
-      <div class="page-footer__column page-footer__column--wide">
-        <div class="page-footer__latest-posts latest-posts">
-          <h2 class="latest-posts_title">Latest Blog Posts</h2>
-          <ul class="latest-posts__list">
-            <li class="latest-posts__item">
-              <h3 class="latest-posts__title">Design is the method of putting form and content together .</h3>
-              <p class="latest-posts__info post-info">
-                <span class="post-info__type">Life style</span>
-                -
-                <span class="post-info__date">July 3, 2017</span>
-              </p>
-              <img class="latest-posts__image" src="img/latest-post-audrey-jackson.jpg" width="70" height="60" alt="!!!!!!!!!!!!!!!!!!!!!!">
-            </li>
-            <li class="latest-posts__item">
-              <h3 class="latest-posts__title">Design is the method of putting form and content together .</h3>
-              <p class="latest-posts__info post-info">
-                <span class="post-info__type">Life style</span>
-                -
-                <span class="post-info__date">July 3, 2017</span>
-              </p>
-              <img class="latest-posts__image" src="img/latest-post-clem-onojeghuo.jpg" width="70" height="60" alt="!!!!!!!!!!!!!!!!!!!!!!">
-            </li>
-          </ul>
-          <a href="" class="latest-posts__more-link">More...</a>
+        <div class="page-footer__column">
+          <div class="page-footer__latest-posts latest-posts">
+            <h2 class="latest-posts__title">Latest Blog Posts</h2>
+            <ul class="latest-posts__list">
+              <li class="latest-posts__item">
+                <div class="latest-posts__wrapper">
+                  <h3 class="latest-posts__post-title">
+                    <a class="latest-posts__link" href="#">Design is the method of putting form and content together .</a>
+                  </h3>
+                  <p class="latest-posts__info">
+                    <span class="latest-posts__type">Life style</span>
+                    -
+                    <span class="latest-posts__date">July 3, 2017</span>
+                  </p>
+                </div>
+                <img class="latest-posts__image" src="img/latest-post-audrey-jackson.jpg" width="70" height="60" alt="!!!!!!!!!!!!!!!!!!!!!!">
+              </li>
+              <li class="latest-posts__item">
+                <div class="latest-posts__wrapper">
+                  <h3 class="latest-posts__post-title">
+                    <a class="latest-posts__link" href="#">Design is the method of putting form and content together .</a>
+                  </h3>
+                  <p class="latest-posts__info">
+                    <span class="latest-posts__type">Life style</span>
+                    -
+                    <span class="latest-posts__date">July 3, 2017</span>
+                  </p>
+                </div>
+                <img class="latest-posts__image" src="img/latest-post-clem-onojeghuo.jpg" width="70" height="60" alt="!!!!!!!!!!!!!!!!!!!!!!">
+              </li>
+            </ul>
+            <a href="" class="latest-posts__more-link">More...</a>
+          </div>
+        </div>
+        
+        <div class="page-footer__column">
+          <div class="page-footer__quick-link quick-link">
+            <h2 class="quick-link__title">Quick Link</h2>
+            <ul class="quick-link__list">
+              <li class="quick-link__item">
+                <a class="quick-link__link" href="#">Home</a>
+              </li>
+              <li class="quick-link__item">
+                <a class="quick-link__link" href="#">About</a>
+              </li>
+              <li class="quick-link__item">
+                <a class="quick-link__link" href="#">Clients</a>
+              </li>
+              <li class="quick-link__item">
+                <a class="quick-link__link" href="#">Portfolio</a>
+              </li>
+              <li class="quick-link__item">
+                <a class="quick-link__link" href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="page-footer__column">
+          <div class="page-footer__instagram-update instagram-update">
+            <h2 class="instagram-update__title">Instagram Update</h2>
+            <div class="instagram-update__list">
+              <div class="instagram-update__item">
+                <a class="instagram-update__link" href="#">
+                  <img class="instagram-update__image" src="img/inst-preview-curtis-macnewton.jpg" width="100" height="97" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
+                </a>
+              </div>
+              <div class="instagram-update__wrapper">
+                <div class="instagram-update__item">
+                  <a class="instagram-update__link" href="#">
+                    <img class="instagram-update__image" src="img/inst-preview-hisu-lee.jpg" width="90" height="42" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
+                  </a>
+                </div>
+                <div class="instagram-update__item">
+                  <a class="instagram-update__link" href="#">
+                    <img class="instagram-update__image" src="img/inst-preview-jennifer-pallian.jpg" width="90" height="45" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
+                  </a>
+                </div>
+              </div>
+              <div class="instagram-update__item">
+                <a class="instagram-update__link" href="#">
+                  <img class="instagram-update__image" src="img/inst-preview-arno-smit.jpg" width="50" height="61" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
+                </a>
+              </div>
+              <div class="instagram-update__item">
+                <a class="instagram-update__link" href="#">
+                  <img class="instagram-update__image" src="img/inst-preview-freestocks.jpg" width="54" height="61" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
+                </a>
+              </div>
+              <div class="instagram-update__item">
+                <a class="instagram-update__link" href="#">
+                  <img class="instagram-update__image" src="img/inst-preview-brooke-lark.jpg" width="74" height="61" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
-      <div class="page-footer__column">
-        <div class="page-footer__quick-link quick-link">
-          <h2 class="quick-link__title">Quick Link</h2>
-          <ul class="quick-link__list">
-            <li class="quick-link__item">
-              <a class="quick-link__link" href="#">Home</a>
-            </li>
-            <li class="quick-link__item">
-              <a class="quick-link__link" href="#">About</a>
-            </li>
-            <li class="quick-link__item">
-              <a class="quick-link__link" href="#">Clients</a>
-            </li>
-            <li class="quick-link__item">
-              <a class="quick-link__link" href="#">Portfolio</a>
-            </li>
-            <li class="quick-link__item">
-              <a class="quick-link__link" href="#">Blog</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="page-footer__column">
-        <div class="page-footer__instagram-update instagram-update">
-          <h2 class="instagram-update__title">Instagram Update</h2>
-          <ul class="instagram-update__list">
-            <li class="instagram-update__item">
-              <a class="instagram-update__link" href="#">
-                <img class="instagram-update__image" src="img/inst-preview-curtis-macnewton.jpg" width="100" height="97" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
-              </a>
-            </li>
-            <li class="instagram-update__item">
-              <a class="instagram-update__link" href="#">
-                <img class="instagram-update__image" src="img/inst-preview-hisu-lee.jpg" width="90" height="42" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
-              </a>
-            </li>
-            <li class="instagram-update__item">
-              <a class="instagram-update__link" href="#">
-                <img class="instagram-update__image" src="img/inst-preview-jennifer-pallian.jpg" width="90" height="45" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
-              </a>
-            </li>
-            <li class="instagram-update__item">
-              <a class="instagram-update__link" href="#">
-                <img class="instagram-update__image" src="img/inst-preview-arno-smit.jpg" width="50" height="61" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
-              </a>
-            </li>
-            <li class="instagram-update__item">
-              <a class="instagram-update__link" href="#">
-                <img class="instagram-update__image" src="img/inst-preview-freestocks.jpg" width="54" height="61" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
-              </a>
-            </li>
-            <li class="instagram-update__item">
-              <a class="instagram-update__link" href="#">
-                <img class="instagram-update__image" src="img/inst-preview-brooke-lark.jpg" width="74" height="61" alt="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+      
       <p class="page-footer__copyright">All Rights @ 2017 By Nazmul Hasan Jingar</p>
     </footer>
   </body>

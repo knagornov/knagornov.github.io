@@ -105,8 +105,9 @@ img {
   left: 0;
   display: flex;
   box-sizing: border-box;
-  width: 100%;
-  max-width: 1300px;
+  /*width: 100%;
+  max-width: 1300px;*/
+  width: 1300px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 66px;
@@ -174,8 +175,9 @@ img {
   min-height: 900px;
   padding-top: 352px;
   box-sizing: border-box;
-  width: 100%;
-  max-width: 1300px;
+  /*width: 100%;
+  max-width: 1300px;*/
+  width: 1300px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 65px;
@@ -384,8 +386,9 @@ img {
   padding-top: 71px;
   text-align: center;
   box-sizing: border-box;
-  width: 100%;
-  max-width: 1300px;
+/*  width: 100%;
+  max-width: 1300px;*/
+  width: 1300px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 65px;

@@ -577,7 +577,7 @@ img {
   padding-right: 65px;
   padding-left: 65px;
   text-align: center; }
-  .blog__container::before {
+/*  .blog__container::before {
     content: "";
     position: absolute;
     height: 93%;
@@ -585,7 +585,7 @@ img {
     width: 100%;
     top: 130px;
     left: 50%;
-    margin-left: -16%; }
+    margin-left: -16%; }*/
 
 .blog__title {
   font-family: "Trirong", "Georgia", serif;
